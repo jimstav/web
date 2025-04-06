@@ -36,7 +36,7 @@ export abstract class View<T extends Model<K>, K extends HasId> {
   }
 
   mapRegions(fragment: DocumentFragment): void {
-    const regionsMap = this.regionsMap;
+    const regionsMap = this.regionsMap();
 
     for (const key in regionsMap) {
       const selector = regionsMap[key];
